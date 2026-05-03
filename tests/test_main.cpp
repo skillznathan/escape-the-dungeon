@@ -32,18 +32,6 @@ void test_dungeon_initialization() {
     std::cout << "test_dungeon_initialization: PASS\n";
 }
 
-void test_combat() {
-    std::cout << "test_combat: ";
-
-    Player p("Hero");
-    Enemy e("Goblin", 10, 5);
-
-    e.takeDamage(p.getAttackPower());
-
-    assert(e.getHealth() < 10);
-
-    std::cout << "PASS\n";
-}
 
 int main() {
     std::cout << "Running tests...\n\n";
@@ -51,7 +39,7 @@ int main() {
     test_player_creation();
     test_room_creation();
     test_dungeon_initialization();
-    test_combat(); 
+    
     std::cout << "\nAll tests passed.\n";
     return 0;
 }

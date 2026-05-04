@@ -12,6 +12,7 @@ add_library(game_lib
     src/Game.cpp
     src/Dungeon.cpp
 )
+target_include_directories(game_lib PUBLIC include)
 
 add_executable(escape_dungeon src/main.cpp)
 target_link_libraries(escape_dungeon game_lib)

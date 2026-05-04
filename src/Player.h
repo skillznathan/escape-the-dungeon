@@ -3,13 +3,10 @@
 
 #include <string>
 
-class Enemy; // needed because Enemy is used below
-
 class Player {
 private:
     std::string name;
     int health;
-    int attackPower;
 
 public:
     Player();
@@ -17,13 +14,6 @@ public:
 
     std::string getName() const;
     int getHealth() const;
-
-    int getAttackPower() const;   // ✅ here
-
-    void attack(Enemy& enemy);    // ✅ here
-
-    void takeDamage(int damage);
-    void heal(int amount);
 };
 
 #endif

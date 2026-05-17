@@ -4,12 +4,10 @@
 #include <vector>
 #include "Room.h"
 
-/**
- * Dungeon manages all rooms and layout.
- */
+
 class Dungeon {
 private:
-    std::vector<Room> rooms;
+    std::vector<Room*> rooms;
 
 public:
     Dungeon();
@@ -17,7 +15,9 @@ public:
     Room& getRoom(int id);
     int getRoomCount() const;
 
-    void setupDungeon(); // initialize rooms
+    void setupDungeon(); 
+
+    Room* getStartRoom() const;
 };
 
 #endif

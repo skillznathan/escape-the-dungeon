@@ -1,17 +1,10 @@
-#include "Player.h"
-#include <iostream>
+#include "Game.h"
 
 int main() {
-    std::string name;
+    Game game;
 
-    std::cout << "Enter player name: ";
-    std::getline(std::cin, name);
-
-    Player player(name);
-
-    std::cout << "Player created!\n";
-    std::cout << "Name: " << player.getName() << "\n";
-    std::cout << "Health: " << player.getHealth() << "\n";
+    game.start();
+    game.run();
 
     return 0;
 }
